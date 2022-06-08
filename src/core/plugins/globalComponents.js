@@ -1,0 +1,25 @@
+import Vue from "vue";
+import deleteAction from "@/components/form/table/deleteAction";
+import editAction from "@/components/form/table/editAction";
+import showAction from "@/components/form/table/showAction";
+import activeToggle from "@/components/form/activeToggle";
+import NameInput from "@/components/form/input";
+import EditInput from "@/components/form/editInput";
+import Errors from "@/components/layouts/errors";
+import vSelect from "vue-select";
+import { ValidationProvider, ValidationObserver } from "vee-validate";
+import Multiselect from "vue-multiselect";
+
+import "vue-select/dist/vue-select.css";
+Vue.component("ValidationProvider", ValidationProvider);
+Vue.component("ValidationObserver", ValidationObserver);
+Vue.component("NameInput", NameInput);
+Vue.component("EditInput", EditInput);
+Vue.component("v-select", vSelect);
+Vue.component("deleteAction", deleteAction);
+Vue.component("editAction", editAction);
+Vue.component("showAction", showAction);
+Vue.component("activeToggle", activeToggle);
+Vue.component("Errors", Errors);
+Vue.component("topBarCard", () => import("@/components/form/topBarCard"));
+Vue.component("multiselect", Multiselect);
